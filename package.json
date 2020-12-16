@@ -1,0 +1,26 @@
+{
+  "name": "multi-sig-wallet",
+  "version": "1.0.0",
+  "description": "Respository to demonstrate the functionality of a multi-signature wallet",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudnickandrew/multi-sig-wallet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rudnickandrew/multi-sig-wallet/issues"
+  },
+  "homepage": "https://github.com/rudnickandrew/multi-sig-wallet#readme",
+  "dependencies": {
+    "@openzeppelin/test-helpers": "^0.5.9"
+  }
+}

@@ -3,11 +3,11 @@ pragma experimental ABIEncoderV2; // importing to be able to return struct in ge
 
 contract Wallet {
     address[] public approvers;
-    unit public quorum;
+    uint public quorum;
     struct Transfer {
         uint id; // the identification number for this request
         uint amount; // amount of ether to be sent in this transfer
-        address payable recipient;
+        address payable to; // transfer recipient
         uint approvals; //amount of approvals received for request
         bool sent; // returns true or false for status of transfer
     }
@@ -15,7 +15,7 @@ contract Wallet {
 
     // to access the bool value in this mapping, indicate address, 
     // then specify id of transfer as follows "approvals[address][id]"
-    mapping(address => mapping(id => bool)) public approvals; 
+    mapping(address => mapping(uint => bool)) public approvals; 
 
     constructor(address[] memory _approvers, uint _quorum) public {
         approvers = _approvers; //this is the initialized set of approvers upon contract deployment
@@ -60,10 +60,10 @@ contract Wallet {
     receive() external payable {} // this is opening up the functionality for the smart contract to receive funds 
 
     modifier onlyApprover() {
-        bool allowed = false
-        for uint i = 0; i < approvers.length; i++) {
+        bool allowed = false;
+        for(uint i = 0; i < approvers.length; i++) {
             if(approvers[i] == msg.sender) {
-                allowed == true;
+                allowed = true;
             }
         }
         require(allowed == true, 'only approvers are allowed to use this function');

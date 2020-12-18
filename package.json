@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/rudnickandrew/multi-sig-wallet#readme",
   "dependencies": {
-    "@openzeppelin/test-helpers": "^0.5.9"
+    "@openzeppelin/test-helpers": "^0.5.9",
+    "@truffle/hdwallet-provider": "^1.2.0"
   }
 }

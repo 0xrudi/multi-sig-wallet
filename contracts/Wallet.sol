@@ -69,4 +69,9 @@ contract Wallet {
         require(allowed == true, 'only approvers are allowed to use this function');
         _;
     }
+
+    // function getApprovals(uint id) external view returns(bool) {
+    //     bool check = approvals[msg.sender][id];
+    //     return check;
+    // }
 }

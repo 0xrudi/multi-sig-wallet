@@ -54,7 +54,29 @@ module.exports = {
           3
         ),
       network_id: 42
-    }
+    },
+
+    rinkeby: {
+      provider: () =>
+        new provider(
+          secrets.privateKeys,
+          'https://rinkeby.infura.io/v3/0d2f44a86de14762a1867f2b8c53435f',
+          0,
+          3
+        ),
+      network_id: 4
+    },
+
+    goerli: {
+      provider: () =>
+        new provider(
+          secrets.privateKeys,
+          'https://goerli.infura.io/v3/0d2f44a86de14762a1867f2b8c53435f',
+          0,
+          3
+        ),
+      network_id: 5
+    }    
   },
 
   // Set default mocha options here, use special reporters etc.
